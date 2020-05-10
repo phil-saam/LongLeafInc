@@ -1,9 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
+
 import { withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
-import Button from "../components/Button";
+
 import Typography from "../components/Typography";
 import curvyLines from "../../img/productCurvyLines.png";
 
@@ -24,20 +25,17 @@ const styles = (theme) => ({
   item: {
     display: "flex",
     flexDirection: "column",
-    alignItems: "center",
     padding: theme.spacing(0, 5),
   },
-  title: {
-    marginBottom: theme.spacing(14),
-  },
+
   number: {
     fontSize: 24,
     fontFamily: theme.typography.fontFamily,
     color: theme.palette.secondary.main,
     fontWeight: theme.typography.fontWeightMedium,
   },
-  image: {
-    height: 55,
+  title: {
+    fontSize: 27,
     marginTop: theme.spacing(4),
     marginBottom: theme.spacing(4),
   },
@@ -55,6 +53,35 @@ const styles = (theme) => ({
 function ProductHowItWorks(props) {
   const { classes } = props;
 
+  const categories = [
+    {
+      title: "Website Creation",
+      body: `We can build any website imaginable from small businesses
+  sites to large eCommerce platforms with thousands of
+  products. Now more than ever an online store is critical
+  to growing your business, we will have yours up and
+  selling.`,
+      list: ["Wordpress", "Web Flow", "Drupal", "Coded Websites"],
+    },
+    {
+      title: "Search Engine Optimization",
+      body: `paid advertising, social media, and other online platforms can generate traffic to your website, but the majority of online traffic is driven by search engines.
+      Improving your position on google searches means more business we can help.`,
+      list: [
+        "SEO",
+        "Keyword Monitoring",
+        "Link Building",
+        "User Experience",
+        "Local SEO",
+      ],
+    },
+    {
+      title: "Digital Marketing",
+      body: `We can help promote your image and company to a wide audience. Let us build your brand, our creative services can give your business the look it deserves`,
+      list: ["Google Ads", "Facebook Ads", "Logo Design", "Print Materials"],
+    },
+  ];
+
   return (
     <section className={classes.root}>
       <Container className={classes.container}>
@@ -63,40 +90,40 @@ function ProductHowItWorks(props) {
           className={classes.curvyLines}
           alt="curvy lines"
         />
-        <Typography
-          variant="h4"
-          marked="center"
-          className={classes.title}
-          component="h2"
-        >
-          How it works
+        <Typography variant="h4" marked="center" component="h2">
+          Our Services
         </Typography>
-        <div>
-          <Grid container spacing={5}>
+
+        <Grid container maxWidth="xl" spacing={5}>
+          {categories.map((category) => (
             <Grid item xs={12} md={4}>
-              <div className={classes.item}>
-                <div className={classes.number}>1.</div>
-                <img
-                  src="/static/themes/onepirate/productHowItWorks1.svg"
-                  alt="suitcase"
-                  className={classes.image}
-                />
-                <Typography variant="h5" align="center">
-                  Appointment every Wednesday 9am.
-                </Typography>
-              </div>
+              <Typography align="center" className={classes.title}>
+                {category.title}
+              </Typography>
+              <Grid container>
+                <Grid item xs>
+                  <Typography variant="h5">{category.body}</Typography>
+                </Grid>
+                {category.list.length > 0 ? (
+                  <Grid item xs={12} sm={12}>
+                    <ul>
+                      {category.list.map((tool) => (
+                        <li>
+                          <Typography variant="h6">{tool}</Typography>
+                        </li>
+                      ))}
+                    </ul>
+                  </Grid>
+                ) : null}
+              </Grid>
             </Grid>
-            <Grid item xs={12} md={4}>
+          ))}
+          {/* <Grid item xs={12} md={4}>
               <div className={classes.item}>
                 <div className={classes.number}>2.</div>
-                <img
-                  src="/static/themes/onepirate/productHowItWorks2.svg"
-                  alt="graph"
-                  className={classes.image}
-                />
+
                 <Typography variant="h5" align="center">
-                  First come, first served. Our offers are in limited
-                  quantities, so be quick.
+                  We put together a prototype design for approval
                 </Typography>
               </div>
             </Grid>
@@ -125,7 +152,8 @@ function ProductHowItWorks(props) {
           href="/premium-themes/onepirate/sign-up/"
         >
           Get started
-        </Button>
+        </Button> */}
+        </Grid>
       </Container>
     </section>
   );

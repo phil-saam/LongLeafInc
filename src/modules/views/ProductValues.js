@@ -90,7 +90,9 @@ function ProductValues(props) {
               </Typography>
               <Typography variant="h5">
                 {"We build mobile first, conversion focused websites "}
-                {", We build friendly clean designs which engage your viewers"}
+                {
+                  ", We build friendly clean designs which engage your viewers. We can build it, Ecommerce, Wordpress, or advanced custom apps"
+                }
               </Typography>
             </div>
           </Grid>

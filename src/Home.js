@@ -2,26 +2,22 @@ import withRoot from "./modules/withRoot";
 // --- Post bootstrap -----
 import React from "react";
 
-import ProductSmokingHero from "./modules/views/ProductSmokingHero";
-import AppFooter from "./modules/views/AppFooter";
 import ProductHero from "./modules/views/ProductHero";
 import ProductValues from "./modules/views/ProductValues";
-import ProductHowItWorks from "./modules/views/ProductHowItWorks";
-import ProductCTA from "./modules/views/ProductCTA";
-import AppAppBar from "./modules/views/AppAppBar";
+import ProductHowItWorks from "./modules/views/WhatWeDo";
+
 import CarouselPortfolio from "./modules/views/RecentWork";
+import Contact from "./Contact";
 
 function Index() {
   return (
     <React.Fragment>
-      <AppAppBar />
       <ProductHero />
       <ProductValues />
       <CarouselPortfolio />
       <ProductHowItWorks />
-      <ProductCTA />
-      <ProductSmokingHero />
-      <AppFooter />
+      {/* <ProductCTA /> */}
+      <Contact />
     </React.Fragment>
   );
 }

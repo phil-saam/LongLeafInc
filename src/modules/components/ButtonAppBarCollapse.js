@@ -15,6 +15,7 @@ const styles = (theme) => ({
   icon: {
     color: "white",
   },
+  menu: { color: theme.palette.primary.dark },
 });
 
 class ButtonAppBarCollapse extends React.Component {
@@ -43,6 +44,7 @@ class ButtonAppBarCollapse extends React.Component {
         </IconButton>
         <Menu
           id="menu-appbar"
+          className={classes.menu}
           anchorEl={anchorEl}
           anchorOrigin={{
             vertical: "top",

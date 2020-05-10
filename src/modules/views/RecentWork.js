@@ -2,8 +2,9 @@ import React from "react";
 import Carousel from "react-material-ui-carousel";
 import autoBind from "auto-bind";
 import Banner from "../components/Banner";
-import { Container, Typography } from "@material-ui/core";
+import { Container } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
+import Typography from "../components/Typography";
 
 import Gemstone from "../../img/portfolio-gemstone.jpg";
 import GemstonePhone from "../../img/phoneGemstone.png";

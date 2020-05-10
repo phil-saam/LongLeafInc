@@ -1,5 +1,5 @@
 import React from "react";
-import clsx from "clsx";
+
 import { withStyles } from "@material-ui/core/styles";
 import ButtonAppBarCollapse from "./ButtonAppBarCollapse";
 import Link from "@material-ui/core/Link";
@@ -21,9 +21,9 @@ const styles = (theme) => ({
     background: "transparent",
   },
   rightLink: {
-    fontSize: 16,
+    fontSize: 13,
     color: theme.palette.common.white,
-    marginLeft: theme.spacing(3),
+    marginRight: theme.spacing(3),
   },
   linkSecondary: {
     color: theme.palette.secondary.main,
@@ -31,47 +31,45 @@ const styles = (theme) => ({
 });
 
 function AppBarCollapse(props) {
-  const { classes } = props;
+  const { classes, links } = props;
 
   return (
     <div className={classes.root}>
       <ButtonAppBarCollapse>
-        <Link
-          color="inherit"
-          variant="h6"
-          underline="none"
-          className={classes.rightLink}
-          href="/premium-themes/onepirate/sign-in/"
-        >
-          {"Sign In"}
-        </Link>
-        <Link
-          variant="h6"
-          underline="none"
-          className={clsx(classes.rightLink, classes.linkSecondary)}
-          href="/premium-themes/onepirate/sign-up/"
-        >
-          {"Sign Up"}
-        </Link>
+        {links.map((link) => (
+          <Link
+            key={link.text}
+            color="inherit"
+            variant="h6"
+            underline="none"
+            className={classes.rightLink}
+            href={link.to}
+          >
+            {link.text}
+          </Link>
+        ))}
       </ButtonAppBarCollapse>
       <div className={props.classes.buttonBar} id="appbar-collapse">
-        <Link
-          color="inherit"
-          variant="h6"
-          underline="none"
-          className={classes.rightLink}
-          href="/premium-themes/onepirate/sign-in/"
-        >
-          {"Sign In"}
-        </Link>
-        <Link
+        {links.map((link) => (
+          <Link
+            key={link.text}
+            color="inherit"
+            variant="h6"
+            underline="none"
+            className={classes.rightLink}
+            href={link.to}
+          >
+            {link.text}
+          </Link>
+        ))}
+        {/* <Link
           variant="h6"
           underline="none"
           className={clsx(classes.rightLink, classes.linkSecondary)}
           href="/premium-themes/onepirate/sign-up/"
         >
           {"Sign Up"}
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

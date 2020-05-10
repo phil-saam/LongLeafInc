@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import AppBarCollapse from "../components/AppBarCollapse";
 
-import LightLogo from "../../img/LongLeafLogo.png";
+import Logo from "../../img/LongLeafLogo.png";
 
 // Mui
 import { withStyles } from "@material-ui/core/styles";
@@ -14,10 +14,9 @@ import { Box } from "@material-ui/core";
 const styles = (theme) => ({
   root: {
     flexGrow: 1,
+    position: "relative",
   },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
+
   title: {
     flexGrow: 1,
   },
@@ -28,28 +27,40 @@ const styles = (theme) => ({
   navigation: {},
   toggleDrawer: {},
   appTitle: {},
+
+  appBarSpacer: theme.mixins.toolbar,
 });
 
 function ButtonAppBar(props) {
   const { classes } = props;
   return (
-    <AppBar position="sticky" className={classes.navigation}>
-      <Toolbar>
-        <img src={LightLogo} className={classes.logo} alt="Light Logo for A9" />
-        <Box p={1}></Box>
-        <Link
-          variant="h6"
-          underline="none"
-          color="inherit"
-          className={classes.title}
-          href="#"
-        >
-          {"Long Leaf Designs"}
-        </Link>
+    <React.Fragment>
+      <AppBar position="fixed" className={classes.navigation}>
+        <Toolbar>
+          <Link
+            variant="h6"
+            underline="none"
+            color="inherit"
+            className={classes.title}
+            href="/home"
+          >
+            <Box display="flex" alignItems="center">
+              <Box p={1}>
+                <img
+                  src={Logo}
+                  className={classes.logo}
+                  alt="Light Logo for A9"
+                />
+              </Box>
+              <Box p={1}>{"Long Leaf Designs"}</Box>
+            </Box>
+          </Link>
 
-        <AppBarCollapse links={props.links} />
-      </Toolbar>
-    </AppBar>
+          <AppBarCollapse links={props.links} />
+        </Toolbar>
+      </AppBar>
+     
+    </React.Fragment>
   );
 }
 
