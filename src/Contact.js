@@ -19,6 +19,7 @@ const styles = (theme) => ({
     backgroundPosition: "fit",
     width: "100%",
     height: "100%",
+    minHeight: 550,
   },
   grid: {
     marginTop: theme.spacing(4),
@@ -38,8 +39,7 @@ const Contact = (props) => {
           <ContactForm />
         </Grid>
         <Grid item xs={12} sm={6}>
-          <Box className={classes.raleigh}>
-          </Box>
+          <Box className={classes.raleigh}></Box>
         </Grid>
       </Grid>
     </Container>

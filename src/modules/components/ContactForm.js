@@ -6,7 +6,7 @@ import Typography from "./Typography";
 // import axios from "axios";
 
 const url =
-  "https://plre8uulpk.execute-api.us-east-1.amazonaws.com/prod/email/send";
+  "https://plre8uulpk.execute-api.us-east-1.amazonaws.com/dev/email/send";
 
 class ContactForm extends Component {
   constructor(props) {
@@ -89,6 +89,7 @@ class ContactForm extends Component {
   //cant set state for 'sent'
   handleSubmit = (e) => {
     e.preventDefault();
+    this.setState({ sent: true });
     console.log(this.state.form, this.state.sent);
     this.post(url, this.state.form, (err, res) => {
       if (err) {
