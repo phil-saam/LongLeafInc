@@ -2,7 +2,8 @@ import React from "react";
 
 import { withStyles } from "@material-ui/core/styles";
 import ButtonAppBarCollapse from "./ButtonAppBarCollapse";
-import Link from "@material-ui/core/Link";
+import { Link } from "react-router-dom";
+import { Menu, MenuItem, Button } from "@material-ui/core";
 
 const styles = (theme) => ({
   root: {
@@ -24,6 +25,7 @@ const styles = (theme) => ({
     fontSize: 13,
     color: theme.palette.common.white,
     marginRight: theme.spacing(3),
+    collapse: { color: theme },
   },
   linkSecondary: {
     color: theme.palette.secondary.main,
@@ -37,30 +39,30 @@ function AppBarCollapse(props) {
     <div className={classes.root}>
       <ButtonAppBarCollapse>
         {links.map((link) => (
-          <Link
+          <MenuItem
             key={link.text}
+            component={Link}
+            to={link.to}
             color="inherit"
             variant="h6"
-            underline="none"
-            className={classes.rightLink}
-            href={link.to}
+            className={classes.rightLink.collapse}
           >
             {link.text}
-          </Link>
+          </MenuItem>
         ))}
       </ButtonAppBarCollapse>
       <div className={props.classes.buttonBar} id="appbar-collapse">
         {links.map((link) => (
-          <Link
+          <Button
+            component={Link}
             key={link.text}
             color="inherit"
             variant="h6"
-            underline="none"
             className={classes.rightLink}
-            href={link.to}
+            to={link.to}
           >
             {link.text}
-          </Link>
+          </Button>
         ))}
         {/* <Link
           variant="h6"
