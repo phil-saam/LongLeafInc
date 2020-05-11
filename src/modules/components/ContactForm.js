@@ -17,13 +17,13 @@ class ContactForm extends Component {
 
     this.state = {
       form: {
-        fname: "",
-        lname: "",
+        fname: "blank",
+        lname: "blank",
         company: "blank",
-        email: "",
-        content: "",
+        email: "blank",
+        content: "blank",
       },
-      hasErrors: true,
+      hasErrors: { fname: true, lname: true, email: true },
       errorText: "Test",
       sent: false,
       inputs: [
@@ -35,6 +35,7 @@ class ContactForm extends Component {
           sm: 6,
           required: true,
           error: false,
+          errorText: " ",
         },
         {
           label: "Last Name",
@@ -44,6 +45,7 @@ class ContactForm extends Component {
           sm: 6,
           required: true,
           error: false,
+          errorText: " ",
         },
         {
           label: "Company",
@@ -63,7 +65,7 @@ class ContactForm extends Component {
           validate: true,
           required: true,
           error: false,
-          errorText: null,
+          errorText: " ",
         },
       ],
     };
@@ -97,45 +99,64 @@ class ContactForm extends Component {
     });
   };
 
-  validateEmail = (e) => {};
+  validateEmail = (email, hasErrors) => {
+    let inputs = this.state.inputs;
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+      inputs[3].error = false;
+      inputs[3].errorText = " ";
+      hasErrors = false;
+      this.setState({ inputs });
+      return hasErrors;
+    } else {
+      hasErrors = true;
+      inputs[3].error = true;
+      inputs[3].errorText = "Please enter a valid email";
+      this.setState({ inputs });
+    }
+    return hasErrors;
+  };
+
+  validateText = (text, i, hasErrors) => {
+    let inputs = this.state.inputs.map((a) => ({ ...a }));
+    if (/^[A-Za-z]+$/.test(text) && text.length > 0) {
+      inputs[i].error = false;
+      inputs[i].errorText = " ";
+      hasErrors = false;
+      this.setState({ inputs });
+      return hasErrors;
+    } else {
+      inputs[i].error = true;
+      inputs[i].errorText = `Please enter a valid name`;
+      hasErrors = true;
+      this.setState({ inputs });
+      return hasErrors;
+    }
+  };
 
   handleChange = (e) => {
+    let hasErrors = { ...this.state.hasErrors };
+    let form = { ...this.state.form };
     if (e.target.id === "fname") {
-      let form = { ...this.state.form };
       form.fname = e.target.value;
-      this.setState({ form });
+      hasErrors.fname = this.validateText(e.target.value, 0, hasErrors);
     } else if (e.target.id === "lname") {
-      let form = { ...this.state.form };
       form.lname = e.target.value;
-      this.setState({ form });
+      hasErrors.lname = this.validateText(e.target.value, 1, hasErrors);
     } else if (e.target.id === "company") {
-      let form = { ...this.state.form };
       form.company = e.target.value;
       if (e.target.value === "") {
         form.company = "blank";
       }
-      this.setState({ form });
     } else if (e.target.id === "email") {
-      let form = { ...this.state.form };
-      let inputs = this.state.inputs.map((a) => ({ ...a }));
-      if (
-        /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(e.target.value)
-      ) {
-        inputs[3].error = false;
-        form.email = e.target.value;
-        this.setState({ hasErrors: false, inputs, form });
-      } else {
-        form.hasErrors = true;
-        inputs[3].error = true;
-        console.log(inputs, this.state.inputs, "state");
-
-        this.setState({ form, inputs, hasErrors: true });
-      }
+      form.email = e.target.value;
+      hasErrors.email = this.validateEmail(e.target.value, hasErrors);
     } else if (e.target.id === "content") {
-      let form = { ...this.state.form };
       form.content = e.target.value;
-      this.setState({ form });
+      if (e.target.value === "") {
+        form.content = "blank";
+      }
     }
+    this.setState({ form, hasErrors });
   };
 
   render() {
@@ -152,13 +173,16 @@ class ContactForm extends Component {
             {this.state.inputs.map((input) => (
               <Grid item xs={12} sm={input.sm} key={input.id}>
                 <TextField
+                  errorStyle={{
+                    position: "absolute",
+                  }}
                   id={input.id}
                   label={input.label}
                   margin={margin}
                   fullWidth={input.fullWidth}
                   error={input.error}
                   required={input.required}
-                  helperText={""}
+                  helperText={input.errorText}
                   onChange={this.handleChange}
                 />
               </Grid>
@@ -168,7 +192,7 @@ class ContactForm extends Component {
               <TextField
                 inputProps={{ pattern: "[a-z]" }}
                 id="content"
-                label="Send us a Message"
+                label="Send us a message..."
                 multiline
                 rows={4}
                 variant="outlined"
@@ -186,7 +210,12 @@ class ContactForm extends Component {
                 color="secondary"
                 variant="contained"
                 id="submit"
-                disabled={this.state.hasErrors}
+                //checks if all errors are false
+                disabled={
+                  !Object.keys(this.state.hasErrors).every(
+                    (k) => !this.state.hasErrors[k]
+                  )
+                }
               >
                 Submit
               </Button>
@@ -205,6 +234,7 @@ class ContactForm extends Component {
                 Phil@longleafdesigns.com
               </Typography>
             </Link>
+            <Typography variant="h7">or use our contact form:</Typography>
           </Box>
         </Grid>
         {formRender}

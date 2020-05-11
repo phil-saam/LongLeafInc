@@ -25,7 +25,8 @@ const styles = (theme) => ({
 const items = [
   {
     Name: "Gemstonespeech.com",
-    Caption: "Speech Language Therapy",
+    Caption:
+      "This design is bright and friendly while portraying professionalism through clean design elements.  Multiple ‘Calls to Action’ strategically placed throughout the website drive customer conversion.",
     contentPosition: "left",
     Items: [
       {
@@ -40,7 +41,8 @@ const items = [
   },
   {
     Name: "Therapydesigns.net",
-    Caption: "Therapy company built with Wordpress",
+    Caption:
+      "Therapy company built with Wordpress, Therapy designs creates websites and media for therapy private practices  ",
     contentPosition: "middle",
     Items: [
       {
@@ -55,7 +57,8 @@ const items = [
   },
   {
     Name: "A9Foods.com",
-    Caption: "Food Consulting Firm",
+    Caption:
+      "This page includes a more technically advanced protein blending tool, this tool provides unique functionality that generates traffic by providing a complex function users need, it also demonstrates A9 Foods technical abilities to potential customers.",
     contentPosition: "right",
     Items: [
       {

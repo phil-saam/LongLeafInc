@@ -2,7 +2,7 @@ import React from "react";
 import Typography from "./modules/components/Typography";
 import { Container, Grid, Box } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
-import raleigh from "./img/raleigh.jpeg";
+import raleigh from "./img/raleighSkyline.jpg";
 import ContactForm from "./modules/components/ContactForm";
 
 const styles = (theme) => ({
@@ -16,12 +16,11 @@ const styles = (theme) => ({
   raleigh: {
     backgroundImage: `url(${raleigh})`,
     backgroundColor: "#233d49",
-    backgroundPosition: "center",
+    backgroundPosition: "fit",
     width: "100%",
-    height: "400px",
+    height: "100%",
   },
   grid: {
-    height: "400px",
     marginTop: theme.spacing(4),
   },
 });
@@ -36,10 +35,11 @@ const Contact = (props) => {
 
       <Grid container spacing={2} className={classes.grid}>
         <Grid item xs={12} sm={6}>
-          <Box className={classes.raleigh}></Box>
+          <ContactForm />
         </Grid>
         <Grid item xs={12} sm={6}>
-          <ContactForm />
+          <Box className={classes.raleigh}>
+          </Box>
         </Grid>
       </Grid>
     </Container>

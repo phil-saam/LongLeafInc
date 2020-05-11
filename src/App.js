@@ -21,7 +21,7 @@ const links = [
 function Index(props) {
   const { classes } = props;
   return (
-    <React.Fragment>
+    <div style={{ minHeight: "100vh" }}>
       <AppAppBar links={links} style={{ marginBottom: 100 }} />
 
       <div className={classes.appBarSpacer}> </div>
@@ -33,8 +33,8 @@ function Index(props) {
           <Redirect from="/" exact to="/home" />
         </Switch>
       </main>
-      <AppFooter />
-    </React.Fragment>
+      <AppFooter style={{ position: "absolute" }} />
+    </div>
   );
 }
 

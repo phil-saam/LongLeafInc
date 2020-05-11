@@ -7,8 +7,6 @@ import {
   CardMedia,
   Typography,
   Grid,
-  Button,
-  Link,
   Box,
 } from "@material-ui/core";
 
@@ -28,12 +26,11 @@ const styles = (theme) => ({
     backgroundPosition: "top",
     position: "relative",
     transition: "300ms",
-    cursor: "pointer",
-    "&:hover": {
-      filter: "brightness(115%)",
-      borderColor: theme.palette.secondary.main,
-      border: "2px",
-    },
+    // "&:hover": {
+    //   filter: "brightness(115%)",
+    //   borderColor: theme.palette.secondary.main,
+    //   border: "2px",
+    // },
   },
   MediaCaption: {
     textOverflow: "ellipsis",
@@ -47,34 +44,30 @@ const styles = (theme) => ({
     height: "10%",
     fontSize: fontHeader,
     transition: "300ms",
-    cursor: "pointer",
-    "&:hover": {
-      opacity: 0.8,
-    },
+    // cursor: "pointer",
+    // "&:hover": {
+    //   opacity: 0.8,
+    // },
   },
 
   Content: {
     color: "white",
     backgroundColor: theme.palette.primary.main,
     height: "100%",
-    cursor: "pointer",
+    // cursor: "pointer",
     padding: "30px",
-    transition: "300ms",
-    "&:hover": {
-      filter: "brightness(80%)",
-    },
+    // transition: "300ms",
+    // "&:hover": {
+    //   filter: "brightness(80%)",
+    // },
   },
 
-  ViewButton: {
+  Title: {
     marginTop: 40,
-    color: "white",
+    marginBottom: 20,
+    color: theme.palette.secondary.light,
     fontSize: fontHeader,
-    border: "3px solid white",
-    textTransform: "capitalize",
-    transition: "200ms",
-    "&:hover, &:active": {
-      backgroundColor: theme.palette.secondary.dark,
-    },
+    textTransform: "uppercase",
   },
 });
 
@@ -98,15 +91,13 @@ function Banner(props) {
       display={{ xs: "none", sm: "block" }}
     >
       <CardContent className={classes.Content}>
-        <Typography className={classes.Title}>{props.item.Name}</Typography>
+        <Typography variant="h6" className={classes.Title}>
+          {props.item.Name}
+        </Typography>
 
         <Typography className={classes.Caption}>
           {props.item.Caption}
         </Typography>
-
-        <Button variant="outlined" className={classes.ViewButton}>
-          View Now
-        </Button>
       </CardContent>
     </Grid>
   );
@@ -121,17 +112,13 @@ function Banner(props) {
         sm={12 / totalItems}
         key={item.Name}
       >
-        <Link href={`/item/${item.Id}`} className="Link">
-          <CardMedia
-            className={classes.Media}
-            image={item.Image}
-            title={item.Name}
-          >
-            <Typography className={classes.MediaCaption}>
-              {item.Name}
-            </Typography>
-          </CardMedia>
-        </Link>
+        <CardMedia
+          className={classes.Media}
+          image={item.Image}
+          title={item.Name}
+        >
+          <Typography className={classes.MediaCaption}>{item.Name}</Typography>
+        </CardMedia>
       </Grid>
     );
 

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import BackgroundImage from "../../img/lowpoly.png";
 import Logo from "../../img/LongLeafLogo.png";
-
+import Link from "@material-ui/core/Link";
 import { withStyles } from "@material-ui/core/styles";
 import Button from "../components/Button";
 import Typography from "../components/Typography";
@@ -68,15 +68,17 @@ function ProductHero(props) {
         variant="h5"
         className={classes.h5}
       >
-        Web Design, Logos, Search Engine Optimization
+        Web Design, Search Engine Optimization, and Digital Marketing
       </Typography>
+
       <Button
+        renderAs={Link}
+        href="/contact"
         color="secondary"
         variant="contained"
         size="large"
         className={classes.button}
         component="a"
-        href="#"
       >
         Request a Quote
       </Button>

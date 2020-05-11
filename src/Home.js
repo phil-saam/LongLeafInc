@@ -5,9 +5,10 @@ import React from "react";
 import ProductHero from "./modules/views/ProductHero";
 import ProductValues from "./modules/views/ProductValues";
 import ProductHowItWorks from "./modules/views/WhatWeDo";
-
+import ContactCTA from "./modules/views/ContactCTA";
 import CarouselPortfolio from "./modules/views/RecentWork";
-import Contact from "./Contact";
+
+
 
 function Index() {
   return (
@@ -16,8 +17,7 @@ function Index() {
       <ProductValues />
       <CarouselPortfolio />
       <ProductHowItWorks />
-      {/* <ProductCTA /> */}
-      <Contact />
+      <ContactCTA />
     </React.Fragment>
   );
 }
