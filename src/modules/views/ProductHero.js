@@ -68,7 +68,8 @@ function ProductHero(props) {
         variant="h5"
         className={classes.h5}
       >
-        Web Design, Search Engine Optimization, and Digital Marketing
+        Web Design, Search Engine Optimization, E-commerce, and Digital
+        Marketing
       </Typography>
 
       <Button

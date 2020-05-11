@@ -90,9 +90,9 @@ function ProductValues(props) {
                 Web Designs
               </Typography>
               <Typography variant="h5">
-                {"We build mobile first, conversion focused websites "}
+                {"We build mobile first, conversion focused websites. "}
                 {
-                  ", We build friendly clean designs which engage your viewers. We can build it, Ecommerce, Wordpress, or advanced custom apps"
+                  "We build friendly, clean designs which engage your viewers. We can build your E-commerce, Wordpress, or advanced custom apps."
                 }
               </Typography>
             </div>
@@ -108,7 +108,7 @@ function ProductValues(props) {
                   "We provide complete digital services, from logos to ad campaigns. "
                 }
                 {
-                  "Work with us to will build your brand and modernize your digital marketing plan"
+                  "Work with us to build your brand and modernize your digital marketing plan."
                 }
               </Typography>
             </div>
@@ -121,7 +121,7 @@ function ProductValues(props) {
               </Typography>
               <Typography variant="h5">
                 {
-                  "What makes good SEO is constantly changing, having the right strategy means more business for you.  Get your business seen with us"
+                  "What makes good SEO is constantly changing. Using the right strategy means more business for you.  Get your business seen with us."
                 }
               </Typography>
             </div>

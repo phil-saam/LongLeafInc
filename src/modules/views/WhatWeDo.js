@@ -57,16 +57,15 @@ function ProductHowItWorks(props) {
     {
       title: "Website Creation",
       body: `We can build any website imaginable from small businesses
-  sites to large eCommerce platforms with thousands of
-  products. Now more than ever an online store is critical
-  to growing your business, we will have yours up and
-  selling.`,
-      list: ["Wordpress", "Web Flow", "Drupal", "Coded Websites"],
+  sites to large E-commerce platforms with thousands of
+  products. Now more than ever, an online store is critical
+  to growing your business. we will have yours up running.`,
+      list: ["E-commerce", "Wordpress", "Web Flow", "Drupal", "Coded Websites"],
     },
     {
       title: "Search Engine Optimization",
-      body: `paid advertising, social media, and other online platforms can generate traffic to your website, but the majority of online traffic is driven by search engines.
-      Improving your position on google searches means more business we can help.`,
+      body: `Paid advertising, social media, and other online platforms can generate traffic to your website. However, the majority of online traffic is driven by search engines.
+      Improving your position on google searches means more business and we can help.`,
       list: [
         "SEO",
         "Keyword Monitoring",
@@ -77,7 +76,7 @@ function ProductHowItWorks(props) {
     },
     {
       title: "Digital Marketing",
-      body: `We can help promote your image and company to a wide audience. Let us build your brand, our creative services can give your business the look it deserves`,
+      body: `We can help promote your image and company to a wide audience. Let us build your brand. Our creative services can give your business the look it deserves.`,
       list: ["Google Ads", "Facebook Ads", "Logo Design", "Print Materials"],
     },
   ];

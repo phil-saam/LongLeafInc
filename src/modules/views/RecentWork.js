@@ -26,7 +26,7 @@ const items = [
   {
     Name: "Gemstonespeech.com",
     Caption:
-      "This design is bright and friendly while portraying professionalism through clean design elements.  Multiple ‘Calls to Action’ strategically placed throughout the website drive customer conversion.",
+      "This design is bright and friendly while portraying professionalism through clean design elements.  Multiple ‘Calls to Action’ strategically placed throughout the website to drive customer conversion.",
     contentPosition: "left",
     Items: [
       {
@@ -42,7 +42,7 @@ const items = [
   {
     Name: "Therapydesigns.net",
     Caption:
-      "Therapy company built with Wordpress, Therapy designs creates websites and media for therapy private practices  ",
+      "Therapy company website built with Wordpress. Therapy Designs creates websites and media for therapy private practices.",
     contentPosition: "middle",
     Items: [
       {
@@ -58,7 +58,7 @@ const items = [
   {
     Name: "A9Foods.com",
     Caption:
-      "This page includes a more technically advanced protein blending tool, this tool provides unique functionality that generates traffic by providing a complex function users need, it also demonstrates A9 Foods technical abilities to potential customers.",
+      "This page includes a more technically advanced protein blending tool. This tool provides unique functionality that generates traffic by providing a complex function users need. This website demonstrates A9 Foods technical abilities to potential customers.",
     contentPosition: "right",
     Items: [
       {

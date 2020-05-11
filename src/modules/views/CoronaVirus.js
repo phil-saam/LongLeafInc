@@ -46,8 +46,8 @@ const CoronaVirus = (props) => {
                 </Typography>
                 <Divider className={classes.Divider} />
                 <Typography color="inherit" className={classes.Divider}>
-                  Due to Corona Virus businesses need E-commerce, We can have
-                  you up and selling.
+                  Due to Corona Virus, businesses need e-commerce. We can have
+                  your store up and running!
                 </Typography>
                 <Divider />
               </Grid>
