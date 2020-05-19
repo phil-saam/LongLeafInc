@@ -26,51 +26,54 @@ const styles = (theme) => ({
 const Contact = (props) => {
   const { classes } = props;
   return (
-    <Container className={classes.container}>
-      <Typography
-        variant="h4"
-        marked="center"
-        align="center"
-        component="h4"
-        gutterBottom
-      >
-        Our E-Commerce Services
-      </Typography>
+    <Box mt={6}>
+      <Container className={classes.container}>
+        <Typography
+          variant="h4"
+          marked="center"
+          align="center"
+          component="h4"
+          gutterBottom
+        >
+          Our E-Commerce Services
+        </Typography>
 
-      <Grid container spacing={5} className={classes.grid}>
-        <Grid item xs={12} sm={6}>
-          <Typography variant="h5" gutterBottom>
-            E-commerce is continuously expanding year after year. Online sales
-            have become a necessity for businesses large and small. Your
-            customers want to buy your products from home, it is easier, more
-            convenient, and right now it is safer. Corona Virus will go away but
-            the trend towards e-commerce will continue. E-commerce is
-            competitive, you need a vibrant fast mobile friendly e-store to set
-            yourself apart.
-          </Typography>
-          <img src={buyIcon} alt="Buy Icon"></img>
-          <Typography variant="h5" gutterBottom>
-            At Long Leaf Designs we create beautiful unique stores that will
-            highlight your products and convert clicks to sales. We can build
-            truly custom websites that are unique to your brand, not some off
-            the shelf template. We use the most modern and popular tools like
-            Shopify and WooCommerce allow store owners to update and manage
-            items for sale quickly and easily. We carefully craft websites that
-            focus on guiding customers towards purchases. We offer complete
-            packages from advertising to unique functional e-stores we can
-            create what your company needs to compete.
-          </Typography>
+        <Grid container spacing={5} className={classes.grid}>
+          <Grid item xs={12} sm={6}>
+            <Video />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <Typography variant="h5" gutterBottom>
+              E-commerce is continuously expanding year after year. Online sales
+              have become a necessity for businesses large and small. Your
+              customers want to buy your products from home, it is easier, more
+              convenient, and right now it is safer. Corona Virus will go away
+              but the trend towards e-commerce will continue. E-commerce is
+              competitive, you need a vibrant, fast, mobile friendly e-store to
+              set yourself apart.
+            </Typography>
+            <Box style={{ textAlign: "center" }}>
+              <img src={buyIcon} alt="Buy Icon" />
+            </Box>
+            <Typography variant="h5" gutterBottom>
+              At Long Leaf Designs we create beautiful unique stores that will
+              highlight your products and convert clicks to sales. We can build
+              truly custom websites that are unique to your brand. We use the
+              most modern and popular tools, like Shopify and WooCommerce, which
+              allow store owners to update and manage items for sale quickly and
+              easily. We carefully craft websites that focus on guiding
+              customers towards purchases. We offer complete packages to create
+              what your company needs to compete.
+            </Typography>
+          </Grid>
         </Grid>
-        <Grid item xs={12} sm={6}>
-          <Video />
+        <Grid container>
+          <Box my={3}>
+            <Grid item xs={12}></Grid>
+          </Box>
         </Grid>
-      </Grid>
-      <Grid container>
-        <Box my={3}>
-          <Grid item xs={12}></Grid>
-        </Box>
-      </Grid>
-    </Container>
+      </Container>
+    </Box>
   );
 };
 

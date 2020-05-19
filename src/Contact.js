@@ -29,20 +29,28 @@ const styles = (theme) => ({
 const Contact = (props) => {
   const { classes } = props;
   return (
-    <Container className={classes.container}>
-      <Typography variant="h1" component="h4" gutterBottom>
-        Contact
-      </Typography>
+    <Box mt={6}>
+      <Container className={classes.container}>
+        <Typography
+          variant="h4"
+          marked="center"
+          align="center"
+          component="h4"
+          gutterBottom
+        >
+          Contact Us
+        </Typography>
 
-      <Grid container spacing={2} className={classes.grid}>
-        <Grid item xs={12} sm={6}>
-          <ContactForm />
+        <Grid container spacing={2} className={classes.grid}>
+          <Grid item xs={12} sm={6}>
+            <ContactForm />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <Box className={classes.raleigh}></Box>
+          </Grid>
         </Grid>
-        <Grid item xs={12} sm={6}>
-          <Box className={classes.raleigh}></Box>
-        </Grid>
-      </Grid>
-    </Container>
+      </Container>
+    </Box>
   );
 };
 

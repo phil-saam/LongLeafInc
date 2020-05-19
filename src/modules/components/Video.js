@@ -9,7 +9,9 @@ import {
   CardActions,
   Typography,
   Button,
+  Grid,
 } from "@material-ui/core";
+import { Link as MuiLink } from "@material-ui/core";
 import demoStore from "../../img/demoStore.mp4";
 
 const styles = (theme) => ({
@@ -38,7 +40,7 @@ const styles = (theme) => ({
     color: "white",
   },
 });
-const url = "https://www.longleafdesigns.com";
+const demoUrl = "https://store.longleafdesigns.com";
 const Video = (props) => {
   const { classes } = props;
   return (
@@ -64,20 +66,30 @@ const Video = (props) => {
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
-        <Button variant="contained" color="primary">
-          <Link href={url} style={{ textDecoration: "none" }}>
-            Visit Store
-          </Link>
-        </Button>
-        <Button
-          component={Link}
-          to="/contact"
-          variant="contained"
-          color="secondary"
+      <CardActions className={classes.cardContent}>
+        <Grid
+          container
+          direction="row"
+          justify="space-between"
+          alignItems="center"
         >
-          Contact Us
-        </Button>
+          <Button
+            variant="outlined"
+            component={MuiLink}
+            href={demoUrl}
+            color="inherit"
+          >
+            Visit Store
+          </Button>
+          <Button
+            component={Link}
+            to="/contact"
+            variant="contained"
+            color="secondary"
+          >
+            Contact Us To Get Started Building your Store
+          </Button>
+        </Grid>
       </CardActions>
     </Card>
   );
