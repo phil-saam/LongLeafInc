@@ -39,6 +39,10 @@ const styles = (theme) => ({
     backgroundColor: theme.palette.primary.main,
     color: "white",
   },
+
+  btnVisit: {
+    backgroundColor: "white",
+  },
 });
 const demoUrl = "https://store.longleafdesigns.com";
 const Video = (props) => {
@@ -74,10 +78,11 @@ const Video = (props) => {
           alignItems="center"
         >
           <Button
-            variant="outlined"
+            variant="contained"
             component={MuiLink}
             href={demoUrl}
-            color="inherit"
+            className={classes.btnVisit}
+            style={{ textDecoration: "none" }}
           >
             Visit Store
           </Button>
