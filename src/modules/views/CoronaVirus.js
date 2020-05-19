@@ -18,7 +18,7 @@ const styles = (theme) => ({
   Snackbar: { marginBottom: "2S0px" },
   Content: {
     backgroundColor: "white",
-    maxWidth: "20%",
+    maxWidth: "300px",
     color: theme.palette.primary.dark,
   },
   Header: { fontSize: 22, marginBottom: theme.spacing(3) },

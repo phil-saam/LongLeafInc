@@ -16,7 +16,6 @@ const styles = (theme) => ({
 const links = [
   { text: "Home", to: "/home" },
   { text: "E-Commerce", to: "/ecommerce" },
-
   { text: "Contact", to: "/contact" },
 ];
 

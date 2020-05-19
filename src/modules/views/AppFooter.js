@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Grid from "@material-ui/core/Grid";
-import { Link } from "@material-ui/core";
+
+import { Link, Box, Grid } from "@material-ui/core";
 import Typography from "../components/Typography";
 
 function Copyright() {
@@ -43,11 +43,20 @@ export default function AppFooter() {
         <Grid item xs={12} sm={3}>
           © Copyright 2020: Long Leaf Designs
         </Grid>
-        <Grid item xs={12} sm={3}>
-          Contact Us:{" "}
-          <Link href="mailto:info@longleafdesigns.com">
-            info@longleafdesigns.com
-          </Link>
+        <Grid row justify="center" alignItems="center">
+          <Grid item xs={12}>
+            Contact Us
+          </Grid>
+          <Grid item xs={12}>
+            <Link href="mailto:info@longleafdesigns.com">
+              info@longleafdesigns.com
+            </Link>
+          </Grid>
+          <Grid item xs={12}>
+            <span itemprop="telephone">
+              <Link href="tel:+9195260822‬">(919) 526-0822‬</Link>
+            </span>
+          </Grid>
         </Grid>
       </Grid>
     </Typography>
