@@ -228,7 +228,7 @@ class ContactForm extends Component {
     return (
       <React.Fragment>
         <Grid container spacing={2}>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={12}>
             <Box p={1}>
               <Typography variant="h6">Email Us:</Typography>
               <Link href="mailto:phil@longleafdesigns.com" target="_top">
@@ -236,10 +236,9 @@ class ContactForm extends Component {
                   Phil@longleafdesigns.com
                 </Typography>
               </Link>
-              <Typography variant="h7">or use our contact form:</Typography>
             </Box>
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={12}>
             <Box p={1}>
               <Typography variant="h6">Call Us:</Typography>
               <span itemprop="telephone">
@@ -250,6 +249,9 @@ class ContactForm extends Component {
                   ‬
                 </Link>
               </span>
+              <Box p={1}>
+                <Typography variant="h6">or use our contact form:</Typography>
+              </Box>
             </Box>
           </Grid>
         </Grid>

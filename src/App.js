@@ -10,6 +10,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import { Route, Redirect, Switch } from "react-router-dom";
 import NotFound from "./modules/views/NotFound";
 
+
 const styles = (theme) => ({
   appBarSpacer: theme.mixins.toolbar,
 });
@@ -23,6 +24,7 @@ function Index(props) {
   const { classes } = props;
   return (
     <div style={{ minHeight: "100vh" }}>
+     
       <AppAppBar links={links} style={{ marginBottom: 100 }} />
       <div className={classes.appBarSpacer} />
       <main>
