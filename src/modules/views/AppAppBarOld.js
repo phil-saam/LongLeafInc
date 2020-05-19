@@ -45,7 +45,7 @@ function AppAppBar(props) {
             className={classes.title}
             href="#"
           >
-            {"Long Leaf Creative"}
+            {"Long Leaf Designs"}
           </Link>
           <div className={classes.right}>
             <AppBarCollapse links={props.links} />{" "}

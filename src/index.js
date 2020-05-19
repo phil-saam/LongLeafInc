@@ -1,17 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import theme from "../src/modules/theme";
+import ScrollToTop from "./ScrollToTop";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <ThemeProvider theme={theme}>
+        <ScrollToTop />
         <CssBaseline />
         <App />
       </ThemeProvider>

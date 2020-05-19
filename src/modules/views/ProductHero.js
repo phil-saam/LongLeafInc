@@ -58,10 +58,10 @@ function ProductHero(props) {
           marked="center"
           classes={classes.logo}
         >
-          Long Leaf Designs
+          Long leaf Designs
         </Typography>
       </Box>
-      <img src={Logo} alt="Long Leaf Logo" />
+      <img src={Logo} alt="Long Leaf Designs Logo" />
       <Typography
         color="inherit"
         align="center"

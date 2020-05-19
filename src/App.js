@@ -3,8 +3,7 @@ import React from "react";
 
 import AppAppBar from "./modules/views/AppAppBar";
 import Home from "./Home";
-// import AboutUs from "./AboutUs"; coming soon!
-
+import eCommerce from "./eCommerce";
 import Contact from "./Contact";
 import AppFooter from "./modules/views/AppFooter";
 import withStyles from "@material-ui/core/styles/withStyles";
@@ -16,6 +15,7 @@ const styles = (theme) => ({
 });
 const links = [
   { text: "Home", to: "/home" },
+  { text: "E-Commerce", to: "/ecommerce" },
 
   { text: "Contact", to: "/contact" },
 ];
@@ -25,12 +25,12 @@ function Index(props) {
   return (
     <div style={{ minHeight: "100vh" }}>
       <AppAppBar links={links} style={{ marginBottom: 100 }} />
-
-      <div className={classes.appBarSpacer}> </div>
+      <div className={classes.appBarSpacer} />
       <main>
         <Switch>
           <Route path="/home" component={Home} />
           <Route path="/contact" component={Contact} />
+          <Route path="/ecommerce" component={eCommerce} />
           <Route path="/not-found" component={NotFound} />
           <Redirect from="/" exact to="/home" />
           <Redirect to="/not-found" />

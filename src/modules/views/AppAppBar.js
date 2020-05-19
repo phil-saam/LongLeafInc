@@ -59,7 +59,6 @@ function ButtonAppBar(props) {
           <AppBarCollapse links={props.links} />
         </Toolbar>
       </AppBar>
-     
     </React.Fragment>
   );
 }
