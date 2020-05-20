@@ -8,6 +8,7 @@ import CodeIcon from "@material-ui/icons/Code";
 import Container from "@material-ui/core/Container";
 import Box from "@material-ui/core/Box";
 import Typography from "../components/Typography";
+import Hidden from "@material-ui/core/Hidden";
 
 import Particles from "react-particles-js";
 
@@ -50,36 +51,38 @@ function ProductValues(props) {
   return (
     <section className={classes.root}>
       <Box className={classes.particles}>
-        <Particles
-          canvasClassName={classes.particles}
-          params={{
-            particles: {
-              line_linked: {
-                color: "#FFFFFF",
-              },
-              number: {
-                value: 45,
-              },
-              size: {
-                value: 4,
-              },
-            },
-            interactivity: {
-              events: {
-                detect_on: "canvas",
-                onhover: {
-                  enable: true,
-                  mode: "repulse",
+        <Hidden smDown>
+          <Particles
+            canvasClassName={classes.particles}
+            params={{
+              particles: {
+                line_linked: {
+                  color: "#FFFFFF",
                 },
-                onClick: {
-                  enable: true,
-                  mode: "push",
+                number: {
+                  value: 45,
                 },
-                resize: true,
+                size: {
+                  value: 4,
+                },
               },
-            },
-          }}
-        />
+              interactivity: {
+                events: {
+                  detect_on: "canvas",
+                  onhover: {
+                    enable: true,
+                    mode: "repulse",
+                  },
+                  onClick: {
+                    enable: true,
+                    mode: "push",
+                  },
+                  resize: true,
+                },
+              },
+            }}
+          />
+        </Hidden>
       </Box>
       <Container className={classes.container}>
         <Grid container spacing={5}>
@@ -92,7 +95,7 @@ function ProductValues(props) {
               <Typography variant="h5">
                 {"We build mobile first, conversion focused websites. "}
                 {
-                  "We build friendly, clean designs which engage your viewers. We can build your E-commerce, Wordpress, or advanced custom apps."
+                  "The website we create are friendly, clean designs which engage your viewers. We can build your E-commerce, Wordpress, or advanced custom apps."
                 }
               </Typography>
             </div>
