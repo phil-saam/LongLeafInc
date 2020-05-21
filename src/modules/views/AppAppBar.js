@@ -21,7 +21,11 @@ const styles = (theme) => ({
     flexGrow: 1,
   },
   logo: {
-    height: "50px",
+    height: "51px",
+  },
+
+  lld: {
+    fontSize: "22px",
   },
 
   navigation: {},
@@ -52,7 +56,9 @@ function ButtonAppBar(props) {
                   alt="Light Logo for A9"
                 />
               </Box>
-              <Box p={1}>{"Long Leaf Designs"}</Box>
+              <Box p={1} className={classes.lld}>
+                {"Long Leaf Designs"}
+              </Box>
             </Box>
           </Link>
 

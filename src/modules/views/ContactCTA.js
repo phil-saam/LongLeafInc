@@ -112,7 +112,7 @@ function ContactCTA(props) {
             <div className={classes.imageDots} />
             <img
               src={notebook}
-              alt="call to action"
+              alt="web design notebook"
               className={classes.image}
             />
           </Hidden>

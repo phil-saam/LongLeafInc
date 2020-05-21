@@ -18,14 +18,15 @@ const styles = (theme) => ({
     // paddingLeft: "16px",
     right: 0,
     position: "relative",
-    width: "95%",
+    width: "100%",
     background: "transparent",
   },
   rightLink: {
-    fontSize: 13,
+    fontSize: 16,
     color: theme.palette.common.white,
     marginRight: theme.spacing(3),
     collapse: { color: theme },
+    fontFamily: "'Montserrat', sans-serif;",
   },
   linkSecondary: {
     color: theme.palette.secondary.main,
@@ -66,14 +67,6 @@ function AppBarCollapse(props) {
             {link.text}
           </Button>
         ))}
-        {/* <Link
-          variant="h6"
-          underline="none"
-          className={clsx(classes.rightLink, classes.linkSecondary)}
-          href="/premium-themes/onepirate/sign-up/"
-        >
-          {"Sign Up"}
-        </Link> */}
       </div>
     </div>
   );

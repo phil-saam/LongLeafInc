@@ -15,10 +15,7 @@ const styles = (theme) => ({
     flexDirection: "column",
     alignItems: "center",
   },
-  eStoreImage: {
-    maxWidth: "100%",
-    height: "auto",
-  },
+
   grid: {
     marginTop: theme.spacing(4),
   },

@@ -57,6 +57,7 @@ function ProductHero(props) {
           variant="h2"
           marked="center"
           classes={classes.logo}
+          gutterBottom
         >
           Long leaf Designs
         </Typography>
