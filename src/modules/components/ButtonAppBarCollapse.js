@@ -39,7 +39,7 @@ class ButtonAppBarCollapse extends React.Component {
 
     return (
       <div className={classes.buttonCollapse}>
-        <IconButton onClick={this.handleMenu}>
+        <IconButton onClick={this.handleMenu} aria-label="menu open">
           <MenuIcon className={classes.icon} />
         </IconButton>
         <Menu

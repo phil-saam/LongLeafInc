@@ -47,6 +47,7 @@ function AppBarCollapse(props) {
             color="inherit"
             variant="h6"
             className={classes.rightLink.collapse}
+            aria-label={link.text}
             onUpdate={() => window.scrollTo(0, 0)}
           >
             {link.text}
@@ -63,6 +64,7 @@ function AppBarCollapse(props) {
             className={classes.rightLink}
             to={link.to}
             onUpdate={() => window.scrollTo(0, 0)}
+            aria-label={link.text}
           >
             {link.text}
           </Button>

@@ -38,7 +38,7 @@ const styles = (theme) => ({
 
   button: {
     width: "100%",
-    color: "white",
+    color: "black",
     marginTop: 20,
     backgroundColor: theme.palette.secondary.light,
     "&:hover": {

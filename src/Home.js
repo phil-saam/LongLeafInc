@@ -30,7 +30,6 @@ function Index() {
           name="description"
           content="Long Leaf Designs Web development and marketing firm.  We create custom fast mobile first websites.  Specialize in E-commerce and SEO"
         />
-        <link rel="canonical" href="https://www.longleafdesigns.com" />
         <title>Long Leaf Designs Inc</title>
       </Helmet>
       <ProductHero />

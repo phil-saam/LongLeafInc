@@ -17,6 +17,10 @@ const styles = (theme) => ({
   },
   button: {
     minWidth: 200,
+    backgroundColor: theme.palette.secondary.main,
+    "&:hover": {
+      backgroundColor: theme.palette.secondary.light,
+    },
   },
   logo: { letterSpacing: "2px" },
 
@@ -76,7 +80,6 @@ function ProductHero(props) {
       <Button
         renderAs={Link}
         href="/contact"
-        color="secondary"
         variant="contained"
         size="large"
         className={classes.button}

@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(8),
     marginBottom: theme.spacing(8),
     display: "flex",
+    fontSize: 22,
   },
 }));
 
@@ -38,6 +39,7 @@ export default function AppFooter() {
         container
         justify="center"
         alignItems="center"
+        spacing={3}
         className={classes.container}
       >
         <Grid item xs={12} sm={3}>
@@ -48,13 +50,18 @@ export default function AppFooter() {
             Contact Us
           </Grid>
           <Grid item xs={12}>
-            <Link href="mailto:info@longleafdesigns.com">
+            <Link
+              href="mailto:info@longleafdesigns.com"
+              aria-label="Contact Email"
+            >
               info@longleafdesigns.com
             </Link>
           </Grid>
           <Grid item xs={12}>
             <span itemprop="telephone">
-              <Link href="tel:+9195260822‬">(919) 526-0822‬</Link>
+              <Link href="tel:+9195260822‬" aria-label="Telephone Number">
+                (919) 526-0822‬
+              </Link>
             </span>
           </Grid>
         </Grid>

@@ -47,6 +47,7 @@ function ButtonAppBar(props) {
             color="inherit"
             className={classes.title}
             href="/home"
+            aria-label="home"
           >
             <Box display="flex" alignItems="center">
               <Box p={1}>

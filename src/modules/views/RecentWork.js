@@ -103,7 +103,6 @@ class CarouselWork extends React.Component {
             Some of our recent work
           </Typography>
           <Carousel
-            className="Example"
             autoPlay={this.state.autoPlay}
             timer={this.state.timer}
             animation={this.state.animation}
