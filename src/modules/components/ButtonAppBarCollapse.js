@@ -6,7 +6,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 
 const styles = (theme) => ({
   buttonCollapse: {
-    [theme.breakpoints.up("sm")]: {
+    [theme.breakpoints.up("md")]: {
       display: "none",
     },
     margin: "10px",
@@ -55,7 +55,7 @@ class ButtonAppBarCollapse extends React.Component {
             horizontal: "right",
           }}
           open={open}
-          onClose={this.handleClose}
+          onClick={this.handleClose}
         >
           {this.props.children}
         </Menu>

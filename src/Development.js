@@ -11,7 +11,7 @@ import mailIcon from "./img/mailIcon.png";
 
 const styles = (theme) => ({
   container: {
-    marginBottom: theme.spacing(7),
+    marginBottom: theme.spacing(3),
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -41,11 +41,18 @@ const styles = (theme) => ({
       backgroundColor: theme.palette.secondary.main,
     },
   },
+  bottomButton: {
+    marginBottom: theme.spacing(15),
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  },
 
   background: {
     backgroundImage: `url(${designImage})`,
     backgroundColor: "#233d49",
     backgroundPosition: "40%, 0%",
+    margin: "auto",
     width: "340px",
     height: "350px",
     WebkitClipPath:
@@ -63,7 +70,7 @@ const Development = (props) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
         <meta
-          name="Long Leaf Designs Web Development"
+          name="description"
           content="Long Leaf Designs Website Design.  We create custom beautiful website with test research based user experiences."
         />
         <link rel="canonical" href="https://www.longleafdesigns.com/webdev" />
@@ -83,13 +90,13 @@ const Development = (props) => {
       <section className={classes.section}>
         <Container>
           <Grid container spacing={5} className={classes.grid}>
-            <Grid item xs={12} sm={8}>
+            <Grid item xs={12} md={7}>
               <Typography className={classes.leadingText} gutterBottom>
                 Every business needs a unique website. Your website is often the
                 first interaction people will have with your business, we make
                 sure the first impression is a good one.
               </Typography>
-              <Box pb={3} style={{ textAlign: "center" }}>
+              <Box py={3} style={{ textAlign: "center" }}>
                 <img src={growthIcon} alt="Growth Icon" />
               </Box>
               <Typography className={classes.leadingText} gutterBottom>
@@ -97,7 +104,7 @@ const Development = (props) => {
                 your visitors. Grow your online presence and business with us.
               </Typography>
             </Grid>
-            <Grid item>
+            <Grid item xs={12} md={5}>
               <Box className={classes.background}>
                 <img
                   style={{ display: "none" }}
@@ -135,7 +142,7 @@ const Development = (props) => {
             </Grid>
             <Grid
               container
-              className={classes.container}
+              className={classes.bottomButton}
               alignItems="center"
               justify="center"
             >

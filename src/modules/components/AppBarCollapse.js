@@ -3,7 +3,7 @@ import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import ButtonAppBarCollapse from "./ButtonAppBarCollapse";
 import { Link } from "react-router-dom";
-import { Menu, MenuItem, Button } from "@material-ui/core";
+import { MenuItem, Button } from "@material-ui/core";
 
 const styles = (theme) => ({
   root: {
@@ -11,7 +11,7 @@ const styles = (theme) => ({
     right: 0,
   },
   buttonBar: {
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down("sm")]: {
       display: "none",
     },
     margin: "10px",
@@ -22,7 +22,7 @@ const styles = (theme) => ({
     background: "transparent",
   },
   rightLink: {
-    fontSize: 16,
+    fontSize: 13,
     color: theme.palette.common.white,
     marginRight: theme.spacing(3),
     collapse: { color: theme },

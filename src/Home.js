@@ -27,7 +27,7 @@ function Index() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
         <meta
-          name="Long Leaf Designs Inc."
+          name="description"
           content="Long Leaf Designs Web development and marketing firm.  We create custom fast mobile first websites.  Specialize in E-commerce and SEO"
         />
         <link rel="canonical" href="https://www.longleafdesigns.com" />

@@ -36,8 +36,8 @@ const Contact = (props) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
         <meta
-          name="Long Leaf Designs Contact Page"
-          content="Long Leaf Designs Contact.  Contact us to get started building your website, digital marketing plan, or e-commerce"
+          name="description"
+          content="Long Leaf Designs Contact.  Contact us to get started building your website, digital marketing plan, or e-commerce store"
         />
         <link rel="canonical" href="https://www.longleafdesigns.com/contact" />
         <title>Long Leaf Designs Contact Us</title>

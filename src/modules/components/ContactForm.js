@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Grid, TextField, Link, Box, Button } from "@material-ui/core";
 
 import Typography from "./Typography";
+import PhoneEmail from "./PhoneEmail";
 
 // import axios from "axios";
 
@@ -228,32 +229,10 @@ class ContactForm extends Component {
     return (
       <React.Fragment>
         <Grid container spacing={2}>
-          <Grid item xs={12} sm={12}>
-            <Box p={1}>
-              <Typography variant="h6">Email Us:</Typography>
-              <Link href="mailto:phil@longleafdesigns.com" target="_top">
-                <Typography variant="h6" color="secondary">
-                  Phil@longleafdesigns.com
-                </Typography>
-              </Link>
-            </Box>
-          </Grid>
-          <Grid item xs={12} sm={12}>
-            <Box p={1}>
-              <Typography variant="h6">Call Us:</Typography>
-              <span itemprop="telephone">
-                <Link href="tel:+9195260822‬">
-                  <Typography variant="h6" color="secondary">
-                    (919) 526-0822
-                  </Typography>
-                  ‬
-                </Link>
-              </span>
-              <Box p={1}>
-                <Typography variant="h6">or use our contact form:</Typography>
-              </Box>
-            </Box>
-          </Grid>
+          <PhoneEmail />
+          <Box p={1}>
+            <Typography variant="h6">or use our contact form:</Typography>
+          </Box>
         </Grid>
         {formRender}
       </React.Fragment>

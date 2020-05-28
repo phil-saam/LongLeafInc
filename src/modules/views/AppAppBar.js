@@ -32,7 +32,7 @@ const styles = (theme) => ({
   toggleDrawer: {},
   appTitle: {},
 
-  appBarSpacer: theme.mixins.toolbar,
+  // appBarSpacer: theme.mixins.toolbar,
 });
 
 function ButtonAppBar(props) {

@@ -30,7 +30,7 @@ const Contact = (props) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
         <meta
-          name="Long Leaf Designs E-Commerce"
+          name="description"
           content="Long Leaf Designs E-commerce.  We create custom conversion and sales focused e-commerce and e-stores."
         />
         <link
